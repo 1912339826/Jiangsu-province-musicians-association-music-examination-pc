@@ -1,7 +1,9 @@
+// 每个页面js必备,api的引入
+var api = getAsk()
 // import './main'
 // 页面加载之后执行的事件
 $(function () {
-    console.log(getAsk())
+    console.log(api)
 })
 
 // 请求
