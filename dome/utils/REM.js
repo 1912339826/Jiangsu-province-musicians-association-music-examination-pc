@@ -1,3 +1,4 @@
+// 设置html标签的字体大小即设置rem
 (function (doc, win) {
     var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
