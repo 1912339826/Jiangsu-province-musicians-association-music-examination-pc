@@ -1,5 +1,36 @@
+/* 清除浮动(兼容) */
+*:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
 
-a{text-decoration:none;} 
-a:link{color:#009;} 
-a:visited{color:#800080;} 
-a:hover,a:active,a:focus{color:#c00;text-decoration:underline;}
+* {
+  zoom: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #009;
+}
+
+a:visited {
+  color: #800080;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #c00;
+  text-decoration: underline;
+}
+
+div {
+  float: right;
+}
