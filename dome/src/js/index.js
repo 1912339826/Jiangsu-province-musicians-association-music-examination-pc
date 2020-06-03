@@ -4,7 +4,9 @@
 //     console.log(informationCategory)
 // }
 
-var informationCategoryUrl = `${getApi().baseUrl}${getApi().url.informationCategory.nameUrl}`
+// 请求连接
+var informationCategoryUrl = getApi().baseUrl + getApi().url.informationCategory.nameUrl;
+
 // 请求
 function informationCategory() {
     $.ajax({
@@ -19,7 +21,7 @@ function informationCategory() {
                 const element = response.result[index];
                 var a = $("<a href=''></a>")
                 a.text(element.name)
-                a.attr('href', `./src/pages/er.html?id=${element.id}`)
+                a.attr('href', "./src/pages/er.html?id="+element.id)
                 a.attr('title',element.name)
                 $("section").append(a);
             }

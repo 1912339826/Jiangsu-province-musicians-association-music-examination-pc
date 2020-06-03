@@ -17,7 +17,7 @@
   <meta name="renderer" content="webkit">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>江苏音乐家协会</title>
+  <title>MY江苏音乐家协会</title>
   <link rel="stylesheet" href="./bringIn/normalize.css">
   <link rel="stylesheet" href="./bringIn/bootstrap-3.3.7-dist/css/bootstrap.css">
   <!-- 此引用必须在自我样式上面 -->
@@ -35,11 +35,6 @@
 </head>
 
 <body>
-  <!-- 视频 -->
-  <!-- <embed id="video1" type="video/webm"  src="http://edge.ivideo.sina.com.cn/33672747003.mp4?KID=sina,viask&Expires=1590249600&ssig=Dvw8J4Jrlz&reqid=" width="200" height="200"> -->
-  <!-- 内
-       容
-       区 -->
   <div id="home">
     <!-- 上部 -->
     <div id="header">
@@ -51,7 +46,7 @@
           <div class="top-right">
             <!-- 上部搜索 -->
             <div class="search">
-              <form action="list.html" method="post">
+              <form action="./src/pages/list.html" method="post">
                 <span class="input">
                   <input type="text" name="keyword" size="20" maxlength="20">
                 </span>
@@ -75,19 +70,20 @@
         </div>
       </div>
     </div>
+    <!-- 导航 -->
     <div id="menu">
       <div class="head_menu">
         <div class="icon"><img src="./src/images/top_menu_img.jpg" border="0"></div>
         <ul class="list">
           <li class="first"><a href="index.html" title="协会首页" class="home_active">首页</a></li>
-          <li><a href="list.html?identity=102" title="协会简介" class="home">协会简介</a></li>
+          <li><a href="./src/pages/list.html?identity=102" title="协会简介" class="home">协会简介</a></li>
           <li><a href="institution.html" title="协会机构" class="home">协会机构</a></li>
-          <li><a href="list.html?identity=104" title="新闻中心" class="home">新闻中心</a></li>
+          <li><a href="./src/pages/list.html?identity=104" title="新闻中心" class="home">新闻中心</a></li>
           <li><a href="award.html" title="音协评奖" class="home">音协评奖</a></li>
-          <li><a href="list.html?identity=106" title="会员中心" class="home">会员中心</a></li>
-          <li><a href="list.html?identity=107" title="考级专区" class="home">考级专区</a></li>
+          <li><a href="./src/pages/list.html?identity=106" title="会员中心" class="home">会员中心</a></li>
+          <li><a href="./src/pages/list.html?identity=107" title="考级专区" class="home">考级专区</a></li>
           <li><a href="community.html" title="爱乐社区" class="home">爱乐社区</a></li>
-          <li><a href="list.html?op=school" title="在线学院" class="home">在线学院</a></li>
+          <li><a href="./src/pages/list.html?op=school" title="在线学院" class="home">在线学院</a></li>
           <li class="last"><a href="note.html?identity=110" title="留言板" class="home">留言板</a></li>
           <br class="clear">
         </ul>
@@ -104,68 +100,72 @@
           <div class="left">
             <div class="preview"></div>
             <div class="video">
-              <embed id="video1" type="video/webm" src="https://www.bilibili.com/5da180e6-92c7-4782-9417-fbabf0b53f8a"
-                width="293" height="180">
+              <!-- <embed id="video1" type="video/webm" src="../1.mp4"
+                width="293" height="180"> -->
+                <!-- 视频播放 -->
+                <video src="../1.mp4" controls="controls"   width="293" height="180">
+                  <object data="../1.mp4" type="" width="293" height="180"></object>
+                </video>
             </div>
           </div>
           <div class="news">
-            <div class="title"><a href="list.html?identity=104" title="新闻中心"><img src="./src/images/news_title_img.jpg"
+            <div class="title"><a href="./src/pages/list.html?identity=104" title="新闻中心"><img src="./src/images/news_title_img.jpg"
                   border="0" alt="新闻中心"></a>
             </div>
             <div class="list">
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
-              <a href="#" title="这是标题">
+              <a href="./src/pages/detail.html" title="这是标题">
                 <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
                 </li>
               </a>
@@ -242,8 +242,8 @@
           <div class="floatR">
             <div class="notice">
               <div class="head">
-                <p class="title"><a href="list.html?identity=111" title="通知公告">通知公告</a></p>
-                <p class="more"><a href="list.html?identity=111" title="通知公告"><img src="./src/images/more.jpg"
+                <p class="title"><a href="./src/pages/list.html?identity=111" title="通知公告">通知公告</a></p>
+                <p class="more"><a href="./src/pages/list.html?identity=111" title="通知公告"><img src="./src/images/more.jpg"
                       border="0" alt="通知公告"></a></p>
               </div>
 
@@ -288,8 +288,8 @@
             </div>
             <div class="notice  introduction">
               <div class="head">
-                <p class="title"><a href="list.html?identity=102" title="协会简介">协会简介</a></p>
-                <p class="more"><a href="list.html?identity=102" title="协会简介"><img src="./src/images/more.jpg"
+                <p class="title"><a href="./src/pages/list.html?identity=102" title="协会简介">协会简介</a></p>
+                <p class="more"><a href="./src/pages/list.html?identity=102" title="协会简介"><img src="./src/images/more.jpg"
                       border="0" alt="协会简介"></a></p>
               </div>
 
@@ -313,7 +313,7 @@
           <br class="clear">
         </div>
         <div class="member_style">
-          <div class="title"><a href="list.html?identity=106" title="会员风采"><img
+          <div class="title"><a href="./src/pages/list.html?identity=106" title="会员风采"><img
                 src="./src/images/member_style_title.jpg" border="0" alt="会员风采"></a></div>
           <div class="list">
             <ul>
@@ -398,8 +398,8 @@
                 <div class="left"><img src="./src/images/middle_img.jpg" border="0" alt="xxx"></div>
                 <div class="right">
                   <div class="top">
-                    <p class="top_left"><a href="list.html?identity=112" title="音乐家介绍">音乐家介绍</a></p>
-                    <p class="top_right"><a href="list.html?identity=112" title="音乐家介绍"><img src="./src/images/more.jpg"
+                    <p class="top_left"><a href="./src/pages/list.html?identity=112" title="音乐家介绍">音乐家介绍</a></p>
+                    <p class="top_right"><a href="./src/pages/list.html?identity=112" title="音乐家介绍"><img src="./src/images/more.jpg"
                           border="0" alt="音乐家介绍"></a></p>
                     <br class="clear">
                   </div>
@@ -423,8 +423,8 @@
                 <div class="left"><img src="./src/images/middle_img.jpg" border="0" alt="xxx"></div>
                 <div class="right">
                   <div class="top">
-                    <p class="top_left"><a href="list.html?identity=113" title="下载专区">下载专区</a></p>
-                    <p class="top_right"><a href="list.html?identity=113" title="下载专区"><img src="./src/images/more.jpg"
+                    <p class="top_left"><a href="./src/pages/list.html?identity=113" title="下载专区">下载专区</a></p>
+                    <p class="top_right"><a href="./src/pages/list.html?identity=113" title="下载专区"><img src="./src/images/more.jpg"
                           border="0" alt="下载专区"></a></p>
                     <br class="clear">
                   </div>
