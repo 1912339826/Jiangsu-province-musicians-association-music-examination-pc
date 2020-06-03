@@ -20,6 +20,7 @@ function informationCategory() {
                 var a = $("<a href=''></a>")
                 a.text(element.name)
                 a.attr('href', `./src/pages/er.html?id=${element.id}`)
+                a.attr('title',element.name)
                 $("section").append(a);
             }
         },
@@ -29,4 +30,4 @@ function informationCategory() {
         }
     });
 }
-informationCategory()
+// informationCategory()
