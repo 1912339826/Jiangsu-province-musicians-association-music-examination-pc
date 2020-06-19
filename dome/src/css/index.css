@@ -358,7 +358,7 @@ input {
   width: 100%;
   background-image: url(../images/exam_list_img.jpg);
   background-repeat: no-repeat;
-  background-position: 0px 0px;
+  background-position: 0px 3px;
   padding-left: 15px;
 }
 
@@ -785,7 +785,7 @@ input {
   text-align: left;
 }
 
-#home>#content>.content_box>.content_down>.musician_top>.download>.list ul {
+/* #home>#content>.content_box>.content_down>.musician_top>.download>.list ul {
   margin-top: 20px;
 }
 
@@ -806,6 +806,28 @@ input {
 
 #home>#content>.content_box>.content_down>.musician_top>.download>.list .article a {
   color: #666;
+} */
+
+#home>#content>.content_box>.content_down>.musician_top>.download>.list{
+  margin-top: 20px;
+}
+
+#home>#content>.content_box>.content_down>.musician_top>.download>.list a{
+  width: 295px;
+  display: inline-block;
+  color: #666;
+}
+
+#home>#content>.content_box>.content_down>.musician_top>.download>.list li{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 22px;
+  width: 100%;
+  background-image: url(../images/exam_list_img.jpg);
+  background-repeat: no-repeat;
+  background-position: 0px 3px;
+  padding-left: 15px;
 }
 
 #home>#content>.content_box>.index_ad8 {
