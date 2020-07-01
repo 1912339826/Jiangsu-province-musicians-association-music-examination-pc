@@ -1,9 +1,3 @@
-// 每个页面js必备,api的引入
-// let informationCategory = Ask(getApi().url.informationCategory.nameUrl,"get")
-// if(informationCategory){
-//     console.log(informationCategory)
-// }
-
 // 请求连接
 var informationCategoryUrl = getApi().baseUrl + getApi().url.informationCategory.nameUrl;
 
@@ -21,8 +15,8 @@ function informationCategory() {
                 const element = response.result[index];
                 var a = $("<a href=''></a>")
                 a.text(element.name)
-                a.attr('href', "./src/pages/er.html?id="+element.id)
-                a.attr('title',element.name)
+                a.attr('href', "./src/pages/er.html?id=" + element.id)
+                a.attr('title', element.name)
                 $("section").append(a);
             }
         },
@@ -32,4 +26,7 @@ function informationCategory() {
         }
     });
 }
-// informationCategory()
+
+$(
+    informationCategory()
+)
