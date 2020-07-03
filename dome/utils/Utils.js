@@ -5,8 +5,8 @@
 function LinkParameterExtraction(search) {
     var obj = {};
     var list = search.split('?')[1].split('&')
-    for (let index = 0; index < list.length; index++) {
-        const element = list[index];
+    for (var index = 0; index < list.length; index++) {
+        var element = list[index];
         obj[element.split('=')[0]] = element.split('=')[1]
     }
     return obj
