@@ -3,8 +3,6 @@
 <html lang="zh">
 
 <head>
-  
-  
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no" />
   <meta name="keywords" content="江苏音乐家协会">
@@ -13,7 +11,7 @@
   <meta name="robots" content="index,follow">
   <!-- 禁止百度转码 -->
   <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <meta http-equiv="X-UA-Compatible" content="IE=11" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- 360使用Google Chrome Frame -->
   <meta name="renderer" content="webkit">
@@ -28,481 +26,96 @@
 
   <style>
     html {
-      /* width: 100vw; */
+      width: 100vw;
       min-width: 750px;
     }
   </style>
-
 </head>
 
 <body>
   <div id="home">
-    <!-- 上部 -->
-    <div id="header">
-      <div class="main">
-        <div class="top">
-          <div class="top-left">
-            <a href="index.html" title="江苏省音乐家协">江苏省音乐家协会欢迎您</a>
-          </div>
-          <div class="top-right">
-            <!-- 上部搜索 -->
-            <div class="search">
-              <form action="./src/pages/list.html" method="post">
-                <span class="input">
-                  <input type="text" name="keyword" size="20" maxlength="20">
-                </span>
-                <span class="button">
-                  <button name="btnSearch" id="btn_Search">搜索</button>
-                </span>
-              </form>
-            </div>
-            <!-- 登录页与注册页按钮 -->
-            <div class="GoLogInOrRegister">
-              <a href="#">注册</a> <a href="#">登录</a>
-            </div>
-            <br class="clear">
-          </div>
-          <br class="clear">
-        </div>
-        <div class="logo">
-          <p>
-            <a href="index.html" title="江苏省音乐家协会"><img src="./src/images/logo.jpg" alt="江苏省音乐家协会" border="0"></a>
-          </p>
-        </div>
-      </div>
+    <!-- 主页最上部 -->
+    <div class="home_top">
+      <span>欢迎来到江苏音乐协会网站</span>
+      <img src="./src/images/one.png" alt="">
     </div>
-    <!-- 导航 -->
-    <div id="menu">
-      <div class="head_menu">
-        <div class="icon"><img src="./src/images/top_menu_img.jpg" border="0"></div>
-        <ul class="list">
-          <li class="first"><a href="index.html" title="协会首页" class="home_active">首页</a></li>
-          <li><a href="./src/pages/list.html?identity=102" title="协会简介" class="home">协会简介</a></li>
-          <li><a href="institution.html" title="协会机构" class="home">协会机构</a></li>
-          <li><a href="./src/pages/list.html?identity=104" title="新闻中心" class="home">新闻中心</a></li>
-          <li><a href="award.html" title="音协评奖" class="home">音协评奖</a></li>
-          <li><a href="./src/pages/list.html?identity=106" title="会员中心" class="home">会员中心</a></li>
-          <li><a href="./src/pages/list.html?identity=107" title="考级专区" class="home">考级专区</a></li>
-          <li><a href="community.html" title="爱乐社区" class="home">爱乐社区</a></li>
-          <li><a href="./src/pages/list.html?op=school" title="在线学院" class="home">在线学院</a></li>
-          <li class="last"><a href="note.html?identity=110" title="留言板" class="home">留言板</a></li>
-          <br class="clear">
-        </ul>
-
+    <!-- 页面的切换 -->
+    <div class="home_tab">
+      <div class="box">
+        <div> <a href="https://www.baidu.com/">首页</a> </div>
+        <div> <a href="https://www.baidu.com/">协会简介</a> </div>
+        <div><a href="https://www.baidu.com/">协会机构</a></div>
+        <div><a href="https://www.baidu.com/">会员中心</a></div>
+        <div><a href="https://www.baidu.com/">考级专区</a></div>
+        <div><a href="https://www.baidu.com/">评奖专区</a></div>
+        <br class="clear">
       </div>
-      <br class="clear">
+      <img src="./src/images/two.png" alt="">
     </div>
-    <div id="content">
-      <div class="content_box">
-        <div class="content_icon">
-          <img src="./src/images/174615ey8heawba0hyamya.jpg" alt="轮播图">
-        </div>
-        <div class="content_top">
-          <div class="left">
-            <div class="preview"></div>
-            <div class="video">
-              <!-- <embed id="video1" type="video/webm" src="../1.mp4"
-                width="293" height="180"> -->
-              <!-- 视频播放 -->
-              <video src="" controls="controls" width="293" height="180">
-                <object data="" type="" width="293" height="180">
-                  对不起,浏览此视频,IE浏览器请使用IE8以上版本!
-                </object>
-              </video>
-            </div>
+    <!-- 头部的大图片以及连接 -->
+    <div class="home_header">
+      <a href="https://www.baidu.com/"></a>
+      <img src="./src/images/header.png" alt="" id="home_header_img">
+    </div>
+    <!-- 通知公告 -->
+    <div class="home_notification">
+      <div class="box">
+        <!-- 标题和查看更多 -->
+        <div class="nav">
+          <div class="canter">
+            <div>通知公告</div>
+            <div>差</div>
           </div>
-          <div class="news">
-            <div class="title"><a href="./src/pages/list.html?identity=104" title="新闻中心"><img
-                  src="./src/images/news_title_img.jpg" border="0" alt="新闻中心"></a>
+          <a href="https://www.baidu.com/" class="right">查看更多>></a>
+        </div>
+        <div class="section">
+          <!-- 轮播图 -->
+          <div class="slideshow">
+            <div class="day">
+              <div>29</div>
+              <div>2019-03</div>
             </div>
+            <div class="imgs">
+              <img src="./src/images/li.jfif" alt="">
+              <div class="ele">
+                <div></div>
+                <div></div>
+                <div class="active"></div>
+              </div>
+            </div>
+            <div class="test">江苏省江苏省江苏省江苏省江苏省江苏省</div>
+          </div>
+          <div class="home_notification_list">
             <div class="list">
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-              <a href="./src/pages/detail.html" title="这是标题">
-                <li>中国音协新兴音乐群体词曲作家采风创作活动在苏州启动
-                </li>
-              </a>
-            </div>
-          </div>
-          <div class="Test_information_and_registration">
-            <nav>
-              <a href="javascript:void(0);" class="active">考试信息</a>
-              <a href="javascript:void(0);" class="no_active">考试报名</a>
-              <br class="clear">
-            </nav>
-            <div>
-              <!-- 信息 -->
-              <div class="information">
-                <div>
-                  <a href="#">
-                    <li>2019年寒假省音协音乐乐理辅导课及考试安排（南京地区）
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>2019年寒假省音协音乐乐理辅导课及考试安排（南京地区）
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>2019年寒假省音协音乐乐理辅导课及考试安排（南京地区）
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>2019年寒假省音协音乐乐理辅导课及考试安排（南京地区）
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>2019年寒假省音协音乐乐理辅导课及考试安排（南京地区）
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>2019年寒假省音协音乐乐理辅导课及考试安排（南京地区）
-                    </li>
-                  </a>
-                </div>
-                <a href="#">
-                  <img style="margin-left:10px;" src="./src/images/145440hpwtth73l3a2lt3p.jpg" alt="">
-                </a>
+              <div class="left">
+                <div>29</div>
+                <div>2019-03</div>
               </div>
-              <!-- 考试 -->
-              <div class="registration"></div>
-            </div>
-          </div>
-        </div>
-        <div class="content_middle">
-          <!-- 二级学会 -->
-          <div class="floatL">
-            <div class="leveltwo">
-              <p class="head">二级学会</p>
-              <ul>
-                <li><a href="http://jiangsuxiaotiqin.blog.163.com/" title="小提琴学会" target="_blank">小提琴学会</a></li>
-                <li><a href="detail_insti.html?id=426" title="合唱联盟" target="_blank">合唱联盟</a></li>
-                <li><a href="detail_insti.html?id=425" title="竹笛学会" target="_blank">竹笛学会</a></li>
-                <li><a href="detail_insti.html?id=428" title="葫芦丝巴乌学会" target="_blank">葫芦丝巴乌学会</a></li>
-                <li><a href="detail_insti.html?id=1127" title="大提琴学会" target="_blank">大提琴学会</a></li>
-                <li><a href="http://jssyyjxh.com/gq.html" title="古琴学会" target="_blank">古琴学会</a></li>
-                <li><a href="detail_insti.html?id=1353" title="古筝学会" target="_blank">古筝学会</a></li>
-                <li><a href="http://www.jssyyjxh.com/detail_insti.html?id=1666" title="钢琴学会" target="_blank">钢琴学会</a>
-                </li>
-                <li><a href="http://www.jssyyjxh.com/detail_insti.html?id=1668" title="民族音乐团队联盟"
-                    target="_blank">民族音乐团队联盟</a></li>
-                <li><a href="http://www.jssyyjxh.com/detail_insti.html?id=1755" title="琵琶学会" target="_blank">琵琶学会</a>
-                </li>
-                <br class="clear">
-              </ul>
-            </div>
-          </div>
-          <!-- 通知公告 协会简介 -->
-          <div class="floatR">
-            <div class="notice">
-              <div class="head">
-                <p class="title"><a href="./src/pages/list.html?identity=111" title="通知公告">通知公告</a></p>
-                <p class="more"><a href="./src/pages/list.html?identity=111" title="通知公告"><img
-                      src="./src/images/more.jpg" border="0" alt="通知公告"></a></p>
-              </div>
-
-              <ul>
-                <li>
-                  <a href="detail.html?id=2186" title="关于2020年江苏省音乐家协会会员申报的通知">关于2020年江苏省音乐家协会会员申报的通知</a>
-                </li>
-                <li>
-                  <a href="detail.html?id=2185" title="转发《关于组织申报中国文联2020年青年文艺创作扶持计划项目的通知》的通知">转发《关于组织申报中国文联2020年青年文艺
-                    ...</a>
-                </li>
-                <li>
-                  <a href="detail.html?id=2184" title="转发省友协、省文联关于举办在江苏外国人唱中文歌曲大赛的通知">转发省友协、省文联关于举办在江苏外国人唱 ...</a>
-                </li>
-                <li>
-                  <a href="detail.html?id=2183"
-                    title="关于转发“中国音协举办<中国当代歌曲创作精品工程‘听见中国听见你’2019年度优秀歌曲推选活动通知>">关于转发“中国音协举办&lt;中国当代歌曲创作 ...</a>
-                </li>
-                <li>
-                  <a href="detail.html?id=2181" title="2019江苏省文艺大奖•茉莉花音乐奖器乐比赛复赛入围选手名单及赛事安排">2019江苏省文艺大奖•茉莉花音乐奖器乐比赛
-                    ...</a>
-                </li>
-                <li>
-                  <a href="detail.html?id=2180" title="2019江苏数字音乐与声音设计大赛章程">2019江苏数字音乐与声音设计大赛章程</a>
-                </li>
-                <li>
-                  <a href="detail.html?id=2177" title="转发关于举办2019江苏省文艺大奖•茉莉花 音乐奖器乐比赛的通知">转发关于举办2019江苏省文艺大奖•茉莉花 ...</a>
-                </li>
-                <li>
-                  <a href="detail.html?id=2174" title="关于举办2019江苏省青少年音乐 “小茉莉花奖”竹笛大赛的通知">关于举办2019江苏省青少年音乐 “小茉莉花 ...</a>
-                </li>
-                <li>
-                  <a href="detail.html?id=2162" title="关于举办第四届紫金合唱节全省合唱作品创作、合唱指挥讲座的通知">关于举办第四届紫金合唱节全省合唱作品创作 ...</a>
-                </li>
-                <li>
-                  <a href="detail.html?id=2159" title="关于举办2019江苏省青少年音乐“小茉莉花奖”声乐大赛的通知">关于举办2019江苏省青少年音乐“小茉莉花奖 ...</a>
-                </li>
-                <li>
-                  <a href="detail.html?id=2160" title="第四届紫金合唱节合唱比赛决赛规定曲目">第四届紫金合唱节合唱比赛决赛规定曲目</a>
-                </li>
-              </ul>
-            </div>
-            <div class="notice  introduction">
-              <div class="head">
-                <p class="title"><a href="./src/pages/list.html?identity=102" title="协会简介">协会简介</a></p>
-                <p class="more"><a href="./src/pages/list.html?identity=102" title="协会简介"><img
-                      src="./src/images/more.jpg" border="0" alt="协会简介"></a></p>
-              </div>
-
-              <div class="summary">
-                <p class="img"><img src="./src/images/144510rq43ccgsqhqssrze.jpg"></p>
-                <p class="text"> 江苏省音乐家协会的前身为“中国音乐家协会南京分会筹备委员会”，1960年3月29日至4月4日在苏州召开的江苏省第三
-                  次文代会期间，“中国音乐家协会江苏分会”正式成立。选出理事33人，时有会员80人，其中全国会员18人。1991年批准成为江 ...</p>
-              </div>
-            </div>
-          </div>
-          <br class="clear">
-        </div>
-        <div class="index_ad23">
-          <a href="#" class="left">
-            <img src="./src/images/113340nztaq76p9mpgsk9k.jpg" alt="">
-          </a>
-          <a href="#" class="right">
-            <img src="./src/images/18393086x56q88vjs8zvvv.jpg" alt="">
-          </a>
-
-          <br class="clear">
-        </div>
-        <div class="member_style">
-          <div class="title"><a href="./src/pages/list.html?identity=106" title="会员风采"><img
-                src="./src/images/member_style_title.jpg" border="0" alt="会员风采"></a></div>
-          <div class="list">
-            <ul>
-              <li class="first">
-                <p class="img"><a href="detail.html?id=2171" title="生命的歌唱——观看吴伟圻老师《生命与歌声同在》独唱音乐会有感"><img
-                      src="./src/images/110626fz58wbbbullbrfth.jpg.t.jpg" border="0"
-                      alt="生命的歌唱——观看吴伟圻老师《生命与歌声同在》独唱音乐会有感"></a></p>
-                <p class="title"><a href="detail.html?id=2171" title="生命的歌唱——观看吴伟圻老师《生命与歌声同在》独唱音乐会有感">生命的歌唱——观看吴伟圻</a>
-                </p>
-                <br class="clear">
-              </li>
-              <li>
-                <p class="img"><a href="detail.html?id=2035" title="省文联名家名作工程有德乡专场音乐会"><img
-                      src="./src/images/110626fz58wbbbullbrfth.jpg.t.jpg" border="0" alt="省文联名家名作工程有德乡专场音乐会"></a></p>
-                <p class="title"><a href="detail.html?id=2035" title="省文联名家名作工程有德乡专场音乐会">省文联名家名作工程有德乡</a></p>
-                <br class="clear">
-              </li>
-              <li>
-                <p class="img"><a href="detail.html?id=1867" title="《我心永驻大别山》"><img
-                      src="./src/images/110626fz58wbbbullbrfth.jpg.t.jpg" border="0" alt="《我心永驻大别山》"></a>
-                </p>
-                <p class="title"><a href="detail.html?id=1867" title="《我心永驻大别山》">《我心永驻大别山》</a></p>
-                <br class="clear">
-              </li>
-              <li>
-                <p class="img"><a href="detail.html?id=1833" title="我会会员范宁宁激情放歌南京紫金大戏院"><img
-                      src="./src/images/110626fz58wbbbullbrfth.jpg.t.jpg" border="0" alt="我会会员范宁宁激情放歌南京紫金大戏院"></a></p>
-                <p class="title"><a href="detail.html?id=1833" title="我会会员范宁宁激情放歌南京紫金大戏院">我会会员范宁宁激情放歌南</a></p>
-                <br class="clear">
-              </li>
-              <br class="clear">
-            </ul>
-          </div>
-          <br class="clear">
-        </div>
-        <div class="zhaoshang" style="font-size:30px;">
-          <span style="color:red;">商务合作热线 钱先生：17701587800</span></div>
-        <!-- 爱乐社区之类 -->
-        <div class="content_down box_mini">
-          <div class="activities">
-            <div class="title">
-              <div class="left"><img src="./src/images/middle_img.jpg" border="0" alt="爱乐社区"></div>
-              <div class="right">
-                <div class="top">
-                  <p class="top_left"><a href="community.html" title="爱乐社区">爱乐社区</a></p>
-                  <p class="top_right"><a href="community.html" title="爱乐社区"><img src="./src/images/more.jpg" border="0"
-                        alt="爱乐社区"></a></p>
-                  <br class="clear">
-                </div>
-                <div><img src="./src/images/introduction_line.jpg" border="0" alt="xxx"></div>
+              <div class="content">
+                <div class="title">江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省</div>
+                <div class="described">江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省</div>
               </div>
             </div>
             <div class="list">
-              <ul>
-                <li class="odd">
-                  <a href="community_detail.html?id=108010016" title=""><img
-                      src="attachment/cms/201706/15/175848008n6xx48t46f61k.png" border="0" alt="" width="220"
-                      height="150"></a>
-                </li>
-                <li class="odd">
-                  <a href="community_detail.html?id=108010015" title=""><img
-                      src="attachment/cms/201601/15/0956248qph86o4pp69mc22.jpg" border="0" alt="" width="220"
-                      height="150"></a>
-                </li>
-                <li class="odd">
-                  <a href="community_detail.html?id=108010014" title=""><img
-                      src="attachment/cms/201512/25/150014qfnqieinq62neqqq.jpg" border="0" alt="" width="220"
-                      height="150"></a>
-                </li>
-                <li class="odd">
-                  <a href="community_detail.html?id=108010013" title=""><img
-                      src="attachment/cms/201510/12/171218upm1wkvz4p2kvzkm.png" border="0" alt="" width="220"
-                      height="150"></a>
-                </li>
-                <br class="clear">
-              </ul>
+              <div class="left"></div>
+              <div class="content"></div>
             </div>
-          </div>
-          <div class="musician_top">
-            <div class="musician">
-              <div class="title">
-                <div class="left"><img src="./src/images/middle_img.jpg" border="0" alt="xxx"></div>
-                <div class="right">
-                  <div class="top">
-                    <p class="top_left"><a href="./src/pages/list.html?identity=112" title="音乐家介绍">音乐家介绍</a></p>
-                    <p class="top_right"><a href="./src/pages/list.html?identity=112" title="音乐家介绍"><img
-                          src="./src/images/more.jpg" border="0" alt="音乐家介绍"></a></p>
-                    <br class="clear">
-                  </div>
-                  <div><img src="./src/images/notice_line.jpg" border="0" alt="xxx"></div>
-                </div>
+            <div class="list">
+              <div class="left">
+                <div>29</div>
+                <div>2019-03</div>
               </div>
-
-              <div class="intro">
-                <div class="left">
-                  <p class="img"><a href="detail.html?id=1093" title="茅原"><img
-                        src="attachment/portal/201409/30/100953wpphsher6hpw6rwt.jpg.t.jpg" border="0" alt="茅原"></a></p>
-                  <p class="name"><a href="detail.html?id=1093" title="茅原">茅原</a></p>
-                </div>
-                <div class="right"> 茅原 音乐理论家、音乐教育家，中共党员，山东济南人。1928年10月出生，1949年参加文工团。1952年毕业于山东大学艺术系，同年任 ...</div>
-                <br class="clear">
-              </div>
-
-            </div>
-            <div class="download">
-              <div class="title">
-                <div class="left"><img src="./src/images/middle_img.jpg" border="0" alt="xxx"></div>
-                <div class="right">
-                  <div class="top">
-                    <p class="top_left"><a href="./src/pages/list.html?identity=113" title="下载专区">下载专区</a></p>
-                    <p class="top_right"><a href="./src/pages/list.html?identity=113" title="下载专区"><img
-                          src="./src/images/more.jpg" border="0" alt="下载专区"></a></p>
-                    <br class="clear">
-                  </div>
-                  <div><img src="./src/images/notice_line.jpg" border="0" alt="xxx"></div>
-                </div>
-              </div>
-              <div class="list">
-                <div>
-                  <a href="#">
-                    <li>2019年寒假省音协音乐乐理辅导课及考试安排（南京地区）
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>2019年寒假省音协音乐乐理辅导课及考试安排（南京地区）
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>2019年寒假省音协音乐乐理辅导课及考试安排（南京地区）
-                    </li>
-                  </a>
-                  <a href="#">
-                    <li>2019年寒假省音协音乐乐理辅导课及考试安排（南京地区）
-                    </li>
-                  </a>
-                </div>
+              <div class="content">
+                <div class="title">江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省</div>
+                <div class="described">江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省</div>
               </div>
             </div>
           </div>
-          <br class="clear">
-        </div>
-        <div class="index_ad8">
-          <p><a href="#" title="首页底部广告"><img src="./src/images/004945gdlw1f7dh5byug8f.jpg" border="0" alt="首页底部广告"></a>
-          </p>
-        </div>
-        <div class="cooperation box_mini">
-          <div class="left">
-            <img src="./src/images/cooperation_img.jpg" border="0" alt="xxx">
-          </div>
-          <div class="right">
-            <p class="right_top">
-              <img src="./src/images/cooperation_img1.jpg" border="0" alt="xxx">
-            </p>
-            <div class="right_down">
-              <ul>
-                <li><a href="http://www.chnmusic.org/" title="中国音乐家协会"><img
-                      src="attachment/portal/201606/03/103557o4bgogukqgwttzsu.png" border="0" alt="中国音乐家协会"></a></li>
-                <li><a href="http://www.135music.com/" title="南京市音协"><img
-                      src="attachment/portal/201606/03/104421ngzsu8ulx93glxvg.png" border="0" alt="南京市音协"></a></li>
-                <li><a href="http://www.cflac.org.cn/" title="中国文联"><img
-                      src="attachment/portal/201606/03/103710bbegkbevpbbtep8e.png" border="0" alt="中国文联"></a></li>
-                <li><a href="http://www.musicsz.com/" title="苏州音协"><img
-                      src="attachment/portal/201606/03/103921jef4e7gba4ibebc0.png" border="0" alt="苏州音协"></a></li>
-                <li><a href="www.jswyw.com" title="江苏省文联"><img
-                      src="attachment/portal/201606/03/103409zjupouj1upwl1ojc.png" border="0" alt="江苏省文联"></a></li>
-                <br class="clear">
-              </ul>
-            </div>
-          </div>
-          <br class="clear">
-        </div>
-        <div class="content_foot"><img src="./src/images/content_foot_img.jpg" border="0" alt="xxx"></div>
-
-        <div class="box" id="box_footer">
-          <p class="foot_top" style="line-height:50px;"></p>
-          <p>
-            地址：江苏省南京市梦都大街50号 &nbsp;&nbsp;&nbsp;&nbsp;电话：025-83572036
-            &nbsp;&nbsp;&nbsp;&nbsp;传真：025-83572076&nbsp;&nbsp;&nbsp;&nbsp; 邮箱：jsyx001@126.com
-          </p>
-          <p></p>
-          <p class="foot_down">版权所有：江苏省音乐家协会 &nbsp;&nbsp;&nbsp;&nbsp; <a
-              href="http://www.beian.miit.gov.cn">苏ICP备：10064548 </a>
-          </p>
         </div>
       </div>
-
+    </div>
+    <!-- 新闻中心 -->
+    <div class="home_news">
     </div>
   </div>
   <script src="./bringIn/bootstrap-3.3.7-dist/js/bootstrap.js"></script>

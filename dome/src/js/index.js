@@ -30,4 +30,13 @@ function informationCategory() {
     });
 }
 
-$(informationCategory());
+// 获取头部大图片的高
+function home_header_img() {
+    $(".home_header").height($("#home_header_img").height())
+}
+
+$(
+    // informationCategory(),
+    // 获取头部大图片的高
+    home_header_img()
+);
