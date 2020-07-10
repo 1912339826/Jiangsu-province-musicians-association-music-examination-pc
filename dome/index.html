@@ -3,26 +3,26 @@
 <html lang="zh">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <meta name="format-detection" content="telephone=no" />
-  <meta name="keywords" content="江苏音乐家协会">
-  <meta name="description" content="江苏音乐家协会">
-  <meta name="author" content="HYT722">
-  <meta name="robots" content="index,follow">
+  <meta name="keywords" content="江苏音乐家协会" />
+  <meta name="description" content="江苏音乐家协会" />
+  <meta name="author" content="HYT722" />
+  <meta name="robots" content="index,follow" />
   <!-- 禁止百度转码 -->
   <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <meta http-equiv="X-UA-Compatible" content="IE=7" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- 360使用Google Chrome Frame -->
-  <meta name="renderer" content="webkit">
+  <meta name="renderer" content="webkit" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>MY江苏音乐家协会</title>
-  <link rel="stylesheet" href="./bringIn/normalize.css">
-  <link rel="stylesheet" href="./bringIn/bootstrap-3.3.7-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./bringIn/normalize.css" />
+  <link rel="stylesheet" href="./bringIn/bootstrap-3.3.7-dist/css/bootstrap.css" />
   <!-- 此引用必须在自我样式上面 -->
   <script type="text/javascript" src="./utils/Utils.js"></script>
   <script src="./bringIn/jquery.js"></script>
-  <link rel="stylesheet" href="./src/css/index.css">
+  <link rel="stylesheet" href="./src/css/index.css" />
 
   <style>
     html {
@@ -37,78 +37,124 @@
     <!-- 主页最上部 -->
     <div class="home_top">
       <span>欢迎来到江苏音乐协会网站</span>
-      <img src="./src/images/one.png" alt="">
+      <img src="./src/images/one.png" alt="" />
     </div>
     <!-- 页面的切换 -->
     <div class="home_tab">
       <div class="box">
-        <div> <a href="https://www.baidu.com/">首页</a> </div>
-        <div> <a href="https://www.baidu.com/">协会简介</a> </div>
+        <div><a href="https://www.baidu.com/">首页</a></div>
+        <div><a href="https://www.baidu.com/">协会简介</a></div>
         <div><a href="https://www.baidu.com/">协会机构</a></div>
         <div><a href="https://www.baidu.com/">会员中心</a></div>
         <div><a href="https://www.baidu.com/">考级专区</a></div>
         <div><a href="https://www.baidu.com/">评奖专区</a></div>
-        <br class="clear">
+        <br class="clear" />
       </div>
-      <img src="./src/images/two.png" alt="">
+      <img src="./src/images/two.png" alt="" />
     </div>
     <!-- 头部的大图片以及连接 -->
     <div class="home_header">
-      <a href="https://www.baidu.com/"></a>
-      <img src="./src/images/header.png" alt="" id="home_header_img">
+      <a href="https://www.baidu.com/" style="background: url(about:blank);"></a>
+      <img src="./src/images/header.png" alt="" id="home_header_img" />
     </div>
     <!-- 通知公告 -->
     <div class="home_notification">
+      <!-- 手机端下载链接 -->
+      <div class="phone_dow">
+        <div class="title">
+          <div>江苏音协官方</div>
+          <div>考级APP下载</div>
+        </div>
+        <div class="content">
+          <img src="./src/images/dow_img_03.png" alt="">
+          <div class="link">
+            <div class="son">
+              <span><a href="https://www.baidu.com/">安卓下载</a></span>
+              <span class="con"></span>
+              <span> <a href="https://www.baidu.com/">苹果下载</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="box">
         <!-- 标题和查看更多 -->
-        <div class="nav">
+        <div class="home_nav">
           <div class="canter">
-            <div>通知公告</div>
-            <div>差</div>
+            <img src="./src/images/home_notification_03.png" alt="">
           </div>
           <a href="https://www.baidu.com/" class="right">查看更多>></a>
         </div>
         <div class="section">
-          <!-- 轮播图 -->
+          <!-- 通知公告轮播图 -->
           <div class="slideshow">
             <div class="day">
-              <div>29</div>
-              <div>2019-03</div>
+              <a href="https://www.baidu.com/">
+                <div>29</div>
+                <div>2019-03</div>
+              </a>
             </div>
             <div class="imgs">
-              <img src="./src/images/li.jfif" alt="">
+              <a href="https://www.baidu.com/"><img src="./src/images/li.jfif" alt="" /></a>
               <div class="ele">
+                <div id="active"></div>
                 <div></div>
                 <div></div>
-                <div class="active"></div>
               </div>
             </div>
-            <div class="test">江苏省江苏省江苏省江苏省江苏省江苏省</div>
+            <a href="https://www.baidu.com/">
+              <div class="test"> 江苏省江苏省江苏省江苏省江苏省江苏省</div>
+            </a>
+
           </div>
+          <!-- 通知公告列表 -->
           <div class="home_notification_list">
             <div class="list">
-              <div class="left">
-                <div>29</div>
-                <div>2019-03</div>
-              </div>
-              <div class="content">
-                <div class="title">江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省</div>
-                <div class="described">江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省</div>
-              </div>
+              <a href="https://www.baidu.com/">
+                <div class="left">
+                  <div>29</div>
+                  <div>2019-03</div>
+                </div>
+                <div class="content">
+                  <div class="title">
+                    江苏省江苏省江苏省江苏江苏省江苏省苏省江苏省江苏省
+                  </div>
+                  <div class="described">
+                    江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省
+                  </div>
+                </div>
+              </a>
             </div>
             <div class="list">
-              <div class="left"></div>
-              <div class="content"></div>
+              <a href="https://www.baidu.com/">
+                <div class="left">
+                  <div>29</div>
+                  <div>2019-03</div>
+                </div>
+                <div class="content">
+                  <div class="title">
+                    江苏省江苏省江苏省江省江苏省江苏省江苏省江苏省
+                  </div>
+                  <div class="described">
+                    江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省
+                  </div>
+                </div>
+              </a>
             </div>
             <div class="list">
-              <div class="left">
-                <div>29</div>
-                <div>2019-03</div>
-              </div>
-              <div class="content">
-                <div class="title">江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省</div>
-                <div class="described">江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省</div>
-              </div>
+              <a href="https://www.baidu.com/">
+                <div class="left">
+                  <div>29</div>
+                  <div>2019-03</div>
+                </div>
+                <div class="content">
+                  <div class="title">
+                    江苏省江苏省江苏省江苏江苏省江苏省江苏省江苏省
+                  </div>
+                  <div class="described">
+                    江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省江苏省
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -116,6 +162,242 @@
     </div>
     <!-- 新闻中心 -->
     <div class="home_news">
+      <div class="box">
+        <!-- 标题和查看更多 -->
+        <div class="home_nav">
+          <div class="canter">
+            <img src="./src/images/home_news_03.png" alt="">
+          </div>
+          <a href="https://www.baidu.com/" class="right">查看更多>></a>
+        </div>
+        <!-- 新闻中心的六宫格列表 -->
+        <div class="list">
+          <a href="https://www.baidu.com/">
+            <div class="list_son">
+              <img src="./src/images/li.jfif" alt="" />
+              <div class="bottom">
+                <div class="title">
+                  音协音协音协音协音协音协音协音协音协音协音协
+                </div>
+                <div class="content">音协1</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://www.baidu.com/" style="margin-right: 1.25vw; margin-left: 1.25vw;">
+            <div class="list_son">
+              <img src="./src/images/li.jfif" alt="" />
+              <div class="bottom">
+                <div class="title">
+                  音协音协音协音协音协音协音协音协音协音协音协
+                </div>
+                <div class="content">音协1</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://www.baidu.com/">
+            <div class="list_son">
+              <img src="./src/images/li.jfif" alt="" />
+              <div class="bottom">
+                <div class="title">
+                  音协音协音协音协音协音协音协音协音协音协音协
+                </div>
+                <div class="content">音协1</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://www.baidu.com/">
+            <div class="list_son">
+              <img src="./src/images/li.jfif" alt="" />
+              <div class="bottom">
+                <div class="title">
+                  音协音协音协音协音协音协音协音协音协音协音协
+                </div>
+                <div class="content">音协1</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://www.baidu.com/" style="margin-right: 1.25vw; margin-left: 1.25vw;">
+            <div class="list_son">
+              <img src="./src/images/li.jfif" alt="" />
+              <div class="bottom">
+                <div class="title">
+                  音协音协音协音协音协音协音协音协音协音协音协
+                </div>
+                <div class="content">音协1</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://www.baidu.com/">
+            <div class="list_son">
+              <img src="./src/images/li.jfif" alt="" />
+              <div class="bottom">
+                <div class="title">
+                  音协音协音协音协音协音协音协音协音协音协音协
+                </div>
+                <div class="content">音协1</div>
+              </div>
+            </div>
+          </a>
+          <br class="clear">
+        </div>
+      </div>
+    </div>
+    <!-- 其他的内容 -->
+    <div class="home_rests">
+      <img src="./src/images/bottom.png" alt="">
+      <div class="box">
+        <!-- 下载专区 -->
+        <div class="download_area">
+          <!-- 标题和查看更多 -->
+          <div class="home_nav">
+            <div class="canter">
+              <div>下载专区</div>
+              <div>差</div>
+            </div>
+          </div>
+          <div class="content">
+            <ul>
+              <li>
+                <a href="https://www.baidu.com/">
+                  江苏省音协江苏省音协江苏省音协江苏省江苏省音协江苏省音协音
+                </a>
+              </li>
+              <li><a href="https://www.baidu.com/">
+                  江苏省音协江苏省音协江苏省音协江苏省江苏省音协江苏省音协音
+                </a></li>
+              <li><a href="https://www.baidu.com/">
+                  江苏省音协江苏省音协江苏省音协江苏省江苏省音协江苏省音协音
+                </a></li>
+              <li><a href="https://www.baidu.com/">
+                  江苏省音协江苏省音协江苏省音协江苏省江苏省音协江苏省音协音
+                </a></li>
+            </ul>
+          </div>
+          <div style="position: relative;">
+            <a href="https://www.baidu.com/"> <button>更多>></button> </a>
+          </div>
+        </div>
+        <!-- 二级学会 -->
+        <div class="secondary_institute">
+          <!-- 标题 -->
+          <div class="home_nav">
+            <div class="canter">
+              <div>二级学会</div>
+              <div>差</div>
+            </div>
+          </div>
+          <div class="content">
+            <ul>
+              <li>
+                <a href="https://www.baidu.com/">
+                  <img src="./src/images/lishi.png" alt="" />
+                  <div> 大提琴学会学会1</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.baidu.com/">
+                  <img src="./src/images/lishi.png" alt="" />
+                  <div> 大提琴学会学会2</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.baidu.com/">
+                  <img src="./src/images/lishi.png" alt="" />
+                  <div> 大提琴学会学会3</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.baidu.com/">
+                  <img src="./src/images/lishi.png" alt="" />
+                  <div> 大提琴学会学会4</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.baidu.com/">
+                  <img src="./src/images/lishi.png" alt="" />
+                  <div> 大提琴学会学会5</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.baidu.com/">
+                  <img src="./src/images/lishi.png" alt="" />
+                  <div> 大提琴学会学会6</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.baidu.com/">
+                  <img src="./src/images/lishi.png" alt="" />
+                  <div> 大提琴学会学会7</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.baidu.com/">
+                  <img src="./src/images/lishi.png" alt="" />
+                  <div> 大提琴学会学会8</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.baidu.com/">
+                  <img src="./src/images/lishi.png" alt="" />
+                  <div> 大提琴学会学会9</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.baidu.com/">
+                  <img src="./src/images/lishi.png" alt="" />
+                  <div> 大提琴学会学会10</div>
+                </a>
+              </li>
+              <br class="clear" />
+            </ul>
+          </div>
+        </div>
+        <br class="clear" />
+        <!-- 合作与赞助 -->
+        <div class="cooperation_sponsorship">
+          <!-- 标题 -->
+          <div class="home_nav">
+            <div class="canter" style="width: 16.9vw;height: 4.875vw;">
+              <img src="./src/images/home_rests_03.png" alt="">
+            </div>
+          </div>
+          <div class="content">
+            <div> <a href="https://www.baidu.com/"><img src="./src/images/lishi.png" alt="" /></a> </div>
+            <div> <a href="https://www.baidu.com/"><img src="./src/images/lishi.png" alt="" /></a> </div>
+            <div> <a href="https://www.baidu.com/"><img src="./src/images/lishi.png" alt="" /></a> </div>
+            <div> <a href="https://www.baidu.com/"><img src="./src/images/lishi.png" alt="" /></a> </div>
+            <div> <a href="https://www.baidu.com/"><img src="./src/images/lishi.png" alt="" /></a> </div>
+            <br class="clear" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 最底部 -->
+    <div class="home_bottom">
+      <div class="son">
+        <div class="list">
+          <img src="./src/images/address.png" alt="" />
+          <span>地址：江苏省</span>
+        </div>
+        <div class="list">
+          <img src="./src/images/phone.png" alt="" />
+          <span>电话：</span>
+        </div>
+        <div class="list"><img src="./src/images/faxes.png" alt="" /> <span>传真：</span></div>
+        <div class="list"><img src="./src/images/mailbox.png" alt="" /> <span>邮箱：</span></div>
+        <br class="clear">
+      </div>
+      <div class="son_bottom">
+        <div>
+          <span>版权所有：</span>
+          <span>江苏省音乐协会</span>
+        </div>
+        <div>
+          <span>苏IPC备：</span>
+          <span>10064548</span>
+        </div>
+        <br class="clear">
+      </div>
     </div>
   </div>
   <script src="./bringIn/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
