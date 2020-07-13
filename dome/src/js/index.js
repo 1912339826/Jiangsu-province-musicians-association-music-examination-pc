@@ -61,4 +61,5 @@ $(
     // 获取头部大图片的高
     home_header_img(),
     slideshow()
+    // console.clear()//清空上面的console显示
 );

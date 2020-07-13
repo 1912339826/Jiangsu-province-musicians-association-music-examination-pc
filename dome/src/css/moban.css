@@ -1,0 +1,273 @@
+/* 清除浮动(兼容) */
+/* <br class="clear"> */
+.clear {
+    height: 0px;
+    line-height: 0px;
+    font-size: 0px;
+    clear: both;
+    overflow: hidden;
+}
+
+body {
+    font-size: 12px;
+    line-height: 1.25;
+    font-family: Tahoma, sans-serif;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    zoom: 1;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+a:-webkit-any-link {
+    color: #000;
+    color: -webkit-link;
+    cursor: pointer;
+}
+
+a:link,
+a:visited {
+    color: #000;
+}
+
+a:active {
+    color: #000;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+input {
+    border: none;
+}
+
+#brief {
+    width: 100%;
+}
+
+/* 中间主要内容的盒子 */
+.brief_box {
+    width: 62.4vw;
+    margin: 0 auto;
+}
+
+/* 下载 */
+.phone_dow {
+    position: absolute;
+    right: 3vw;
+    top: 27.5vw;
+    z-index: 3;
+    width: 10vw;
+    height: 14vw;
+}
+
+.phone_dow>.title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 0.69vw;
+}
+
+.phone_dow>.title>div {
+    font-family: "PingFang-SC-Bold";
+    font-size: 0.07rem;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 1.25vw;
+    letter-spacing: 0rem;
+    color: #212121;
+}
+
+.phone_dow>.content {
+    height: 11.01vw;
+    width: 100%;
+    position: relative;
+}
+
+.phone_dow>.content>img {
+    height: 100%;
+    width: 100%;
+}
+
+.phone_dow>.content>.link {
+    background-color: #050001;
+    width: 100%;
+    height: 1.88vw;
+    line-height: 1.88vw;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+}
+
+.phone_dow>.content>.link>.son {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.phone_dow>.content>.link>.son>.con {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    height: 100%;
+}
+
+.phone_dow>.content>.link>.son>span {
+    text-align: center;
+}
+
+.phone_dow>.content>.link>.son>span:nth-child(1) {
+    display: inline-block;
+    width: 45%;
+    text-decoration: underline;
+}
+
+.phone_dow>.content>.link>.son>span:nth-child(3) {
+    display: inline-block;
+    width: 45%;
+    text-decoration: underline;
+}
+
+.phone_dow>.content>.link>.son>span>a {
+    color: #fff;
+}
+
+.brief_top {
+    width: 100%;
+    height: 2.5vw;
+    position: relative;
+}
+
+.brief_top>.brief_box {
+    height: 2.5vw;
+    position: relative;
+}
+
+.brief_top>img {
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.brief_top>.brief_box>span {
+    display: block;
+    line-height: 2.5vw;
+    height: 2.5vw;
+    font-size: 0.07rem;
+    font-weight: 600;
+}
+
+.brief_tab {
+    height: 3.125vw;
+    position: relative;
+    width: 100%;
+}
+
+.brief_tab>.brief_box>div {
+    float: left;
+    height: 3.125vw;
+    line-height: 3.125vw;
+    width: 16%;
+    text-align: center;
+    font-size: 0.07rem;
+    font-weight: 600;
+}
+
+.brief_tab>img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.brief_main {
+    position: relative;
+}
+
+.brief_main>img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 30vw;
+}
+
+.brief_main>.brief_box>img {
+    margin-top: 1vw;
+    width: 100%;
+}
+
+.brief_main>.brief_box>.crumbs {
+    height: 3.5vw;
+    line-height: 3.5vw;
+    font-size: 0.07rem;
+}
+
+.brief_main>.brief_box>.section {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 1.3vw;
+    padding-left: 2.6vw;
+    padding-right: 1.68vw;
+    height: 54vw;
+}
+
+.brief_main>.brief_box>.section>img{
+    width: 12.7vw;
+    height: 4.9vw;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1.5vw;
+}
+
+.brief_bottom {
+    height: 7vw;
+    width: 100%;
+    background-color: #f2eeea;
+    padding-top: 1.6vw;
+}
+
+.brief_bottom>.brief_box>.brief_bottom_top {
+    height: 2.25vw;
+    
+}
+
+.brief_bottom>.brief_box>.brief_bottom_top>.son {
+    float: left;
+    height: 2.25vw;
+    width: 25%;
+    line-height: 2.25vw;
+    color: #787877;
+    text-align: right;
+}
+
+.brief_bottom>.brief_box>.brief_bottom_top>.son>img{
+    height: 1vw;
+    margin-right: 0.5vw;
+}
+
+.brief_bottom>.brief_box>.brief_bottom_bottom {
+    height: 2.2vw;
+}
+
+.brief_bottom>.brief_box>.brief_bottom_bottom>.son {
+    float: left;
+    height: 2.2vw;
+    line-height: 2.2vw;
+    width: 45%;
+    color: #bdbab7;
+}

@@ -26,6 +26,8 @@ function LinkParameterExtraction(search) {
     if (!doc.addEventListener) return;
     win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
+    // console.log("       ♪♪\n       ♪♪\n       ♪♪♪♪♪♪♪♪\n       ♪♪    ♪♪\n       ♪♪    ♪♪\n       ♪♪    ♪♪\n       ♪♪    ♪♪\n       ♪♪\n       ♪♪\n      ♪♪♪\n ♪♪♪♪♪♪♪♪\n♪♪♪♪♪♪♪♪♪\n♪♪♪♪♪♪♪♪♪\n♪♪♪♪♪♪♪♪")
+    //利用css样式加载图片 //没法直接设置width和height样式,line-height图片高度,再调padding 
 })(document, window);
 
 // 日期

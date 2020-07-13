@@ -53,22 +53,33 @@ input {
   border: none;
 }
 
+
+/* 中间主要内容的盒子 */
+.brief_box {
+  width: 62.4vw;
+  margin: 0 auto;
+}
+
 .home_top {
+  width: 100%;
+  height: 2.5vw;
+  position: relative;
+}
+
+.brief_top>.brief_box {
   height: 2.5vw;
   position: relative;
 }
 
 .home_top>img {
+  top: 0;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   width: 100%;
   height: 100%;
 }
 
-.home_top>span {
-  position: absolute;
-  left: 19.5%;
-  z-index: 2;
+.home_top>.brief_box>span {
   display: block;
   line-height: 2.5vw;
   height: 2.5vw;
@@ -82,14 +93,17 @@ input {
   width: 100%;
 }
 
-.home_tab>.box {
-  position: absolute;
-  left: 19.5%;
-  z-index: 2;
-  width: 65%;
+.home_tab>.brief_box>div {
+  float: left;
+  height: 3.125vw;
+  line-height: 3.125vw;
+  width: 16%;
+  text-align: center;
+  font-size: 0.07rem;
+  font-weight: 600;
 }
 
-.home_tab>.box>div {
+.home_tab>.brief_box>div {
   float: left;
   height: 3.125vw;
   line-height: 3.125vw;
@@ -101,7 +115,8 @@ input {
 
 .home_tab>img {
   position: absolute;
-  z-index: 1;
+  top: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
 }
@@ -109,21 +124,42 @@ input {
 .home_header {
   width: 100%;
   position: relative;
+  height: 30vw;
 }
 
 .home_header>img {
-  width: 100%;
   position: absolute;
+}
+
+.home_header>.banner_background_picture {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.home_header>.banner {
+  height: 27.2vw;
+  width: 77.5vw;
+  margin-top: 1vw;
   z-index: 1;
+  left: 10.5%;
 }
 
 .home_header>a {
-  width: 62.3%;
   position: absolute;
   z-index: 2;
-  left: 19.5%;
-  top: 2.4vw;
-  height: 27vw;
+  display: inline-block;
+  width: 7.875vw;
+  height: 2.6vw;
+  left: 28%;
+  bottom: 18%;
+}
+
+.home_header>.find_out_the_details {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
 }
 
 .home_notification {
@@ -137,7 +173,7 @@ input {
 .home_notification>.box {
   width: 62.5%;
   position: absolute;
-  left: 19.4%;
+  left: 18.8%;
 }
 
 .home_notification>.phone_dow {
@@ -220,8 +256,6 @@ input {
 .home_notification>.phone_dow>.content>.link>.son>span>a {
   color: #fff;
 }
-
-.home_notification>.box>.home_nav>.canter {}
 
 .home_notification>.box>.home_nav>.canter>img {
   margin: 0 auto;
@@ -393,13 +427,15 @@ input {
 .home_news>.box {
   width: 62.5%;
   position: absolute;
-  left: 19.4%;
+  left: 18.8%;
   margin-top: 1.9vw;
 }
 
 .home_news>.box>.home_nav>.canter>img {
   display: block;
   margin: 0 auto;
+  height: 4.875vw;
+  width: 10.5vw;
 }
 
 .home_news>.box>.list {
@@ -413,8 +449,6 @@ input {
   float: right;
   margin-top: 1.6vw;
 }
-
-.home_news>.box>.list>a>.list_son {}
 
 .home_news>.box>.list>a>.list_son>img {
   width: 100%;
@@ -459,7 +493,7 @@ input {
   z-index: 2;
   width: 62.5%;
   position: absolute;
-  left: 19.4%;
+  left: 18.8%;
   margin-top: 1.2vw;
 }
 
@@ -536,14 +570,23 @@ input {
   height: 100%;
 }
 
+.download_area .button_fa {
+  text-align: center;
+}
+
+.download_area .button_fa>a {
+  display: inline-block;
+  width: 5vw;
+  height: 1.875vw;
+}
+
 .download_area button {
   border: none;
   background-color: #c0937e;
   width: 5vw;
   height: 1.875vw;
+  font-size: 0.05rem;
   color: #fff;
-  margin: 0 auto;
-  display: block;
 }
 
 .secondary_institute {
@@ -591,6 +634,8 @@ input {
 .cooperation_sponsorship>.home_nav>.canter>img {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
 }
 
 .cooperation_sponsorship .content {
@@ -611,46 +656,44 @@ input {
 }
 
 .home_bottom {
-  height: 7.1vw;
+  height: 7vw;
   width: 100%;
   background-color: #f2eeea;
   position: relative;
+  font-size: 0.065rem;
 }
 
 .home_bottom>.son {
   width: 62.5%;
   position: absolute;
-  left: 19.4%;
+  left: 18.8%;
   margin-top: 2.3vw;
 }
 
 .home_bottom>.son>.list {
   float: left;
-  font-size: 0.07rem;
   color: #9b9998;
   width: 25%;
   height: 0.875vw;
   line-height: 0.875vw;
   text-align: center;
-  font-weight: 600;
 }
 
 .home_bottom>.son>.list>img {
-  height: 0.875vw;
+  height: 1vw;
   margin-right: 0.5vw;
 }
 
 .son_bottom {
   width: 62.5%;
   position: absolute;
-  left: 19.4%;
+  left: 18.8%;
   bottom: 1.25vw;
 }
 
 .son_bottom div {
   float: left;
   width: 45%;
-  font-size: 0.06rem;
   color: #9b9998;
 }
 
