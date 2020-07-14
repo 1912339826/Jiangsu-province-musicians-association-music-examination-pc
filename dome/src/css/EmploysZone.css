@@ -249,9 +249,11 @@ input {
 
 .EmploysZone_main>.EmploysZone_box>.section>.list>.son>a>.right{
     border-bottom: 1px solid #efefef;
+    /*  没有图片时取消这两项 */
     float: right;
-    height: 100%;
     width: 41.5vw;
+    /*  */
+    height: 100%;
     padding-right: 0.87vw;
     padding-top: 1.4vw;
 }
@@ -267,6 +269,7 @@ input {
     margin-top: 1vw;
     line-height: 1.3vw;
     margin-bottom: 1vw;
+    width: 41.5vw
 }
 
 
