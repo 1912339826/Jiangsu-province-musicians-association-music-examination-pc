@@ -4,12 +4,16 @@
 // 截取url参数,传的参数为当前页面的window.location.search
 function LinkParameterExtraction(search) {
     var obj = {};
-    var list = search.split('?')[1].split('&')
-    for (var index = 0; index < list.length; index++) {
-        var element = list[index];
-        obj[element.split('=')[0]] = element.split('=')[1]
-    }
-    return obj
+    // if (!!(search.split("?")[0] != "")) {
+        var list = search.split('?')[1].split('&')
+        for (var index = 0; index < list.length; index++) {
+            var element = list[index];
+            obj[element.split('=')[0]] = element.split('=')[1]
+        }
+        return obj
+    // } else {
+        // return false
+    // }
 }
 
 // 设置html标签的字体大小即设置rem
@@ -27,7 +31,21 @@ function LinkParameterExtraction(search) {
     win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
     // console.log("       ♪♪\n       ♪♪\n       ♪♪♪♪♪♪♪♪\n       ♪♪    ♪♪\n       ♪♪    ♪♪\n       ♪♪    ♪♪\n       ♪♪    ♪♪\n       ♪♪\n       ♪♪\n      ♪♪♪\n ♪♪♪♪♪♪♪♪\n♪♪♪♪♪♪♪♪♪\n♪♪♪♪♪♪♪♪♪\n♪♪♪♪♪♪♪♪")
-    //利用css样式加载图片 //没法直接设置width和height样式,line-height图片高度,再调padding 
 })(document, window);
 
 // 日期
+
+function Today(params) {
+    var data = new Date(params);
+    var year = data.getFullYear();
+    var month = data.getMonth() + 1;
+    month = month < 10 ? "0" + month : month;
+    var getDate = data.getDate();
+    return {
+        year: year,
+        month: month,
+        getDate: getDate
+    }
+}
+
+// console.clear()

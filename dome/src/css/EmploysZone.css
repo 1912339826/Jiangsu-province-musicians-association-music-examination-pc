@@ -223,7 +223,7 @@ input {
     padding-top: 1.3vw;
     padding-left: 2.6vw;
     padding-right: 1.68vw;
-    height: 54vw;
+    /* height: 50vw; */
 }
 
 .EmploysZone_main>.EmploysZone_box>.section>img{
@@ -268,9 +268,27 @@ input {
     font-size: 0.06rem;
     margin-top: 1vw;
     line-height: 1.3vw;
+    height: 2.3vw;
     margin-bottom: 1vw;
-    width: 41.5vw
+    width: 41.5vw;
+    overflow:hidden;
+    position:relative;
 }
+
+
+.EmploysZone_main>.EmploysZone_box>.section>.list>.son>a>.right>.content:after{
+    content:"...";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding-left:20px;
+    background: -webkit-linear-gradient(left, transparent, #fff 62%);
+    background: -o-linear-gradient(right, transparent, #fff 62%);
+    background: -moz-linear-gradient(right, transparent, #fff 62%);
+    background: linear-gradient(to right, transparent, #fff 62%);
+  }
+
 
 
 .EmploysZone_main>.EmploysZone_box>.section>.list>.son>a>.right>.record{
@@ -330,6 +348,7 @@ input {
 
 .pagination>.active>a{
     background-color: #b2806c;
+    pointer-events:none;
 }
 
 .pagination>.active>a:hover{
