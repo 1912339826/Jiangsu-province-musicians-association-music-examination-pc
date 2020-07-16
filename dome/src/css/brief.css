@@ -226,7 +226,7 @@ input {
     height: 54vw;
 }
 
-.brief_main>.brief_box>.section>img{
+.brief_main>.brief_box>.section>img {
     width: 12.7vw;
     height: 4.9vw;
     margin: 0 auto;
@@ -234,12 +234,12 @@ input {
     margin-bottom: 1.5vw;
 }
 
-.brief_main>.brief_box>.section>.list>.son{
+.brief_main>.brief_box>.section>.list>.son {
     height: 9.3vw;
     margin-bottom: 1.8vw;
 }
 
-.brief_main>.brief_box>.section>.list>.son>a>img{
+.brief_main>.brief_box>.section>.list>.son>a>img {
     border: 8px solid #f5f5f5;
     height: 100%;
     width: 15vw;
@@ -247,7 +247,7 @@ input {
     float: left;
 }
 
-.brief_main>.brief_box>.section>.list>.son>a>.right{
+.brief_main>.brief_box>.section>.list>.son>a>.right {
     border-bottom: 1px solid #efefef;
     float: right;
     height: 100%;
@@ -256,21 +256,37 @@ input {
     padding-top: 1.4vw;
 }
 
-.brief_main>.brief_box>.section>.list>.son>a>.right>.title{
+.brief_main>.brief_box>.section>.list>.son>a>.right>.title {
     font-size: 0.08rem;
     color: #444137;
 }
 
-.brief_main>.brief_box>.section>.list>.son>a>.right>.content{
+.brief_main>.brief_box>.section>.list>.son>a>.right>.content {
     color: #d0d0d0;
     font-size: 0.06rem;
     margin-top: 1vw;
     line-height: 1.3vw;
+    height: 2.3vw;
+    overflow: hidden;
+    position: relative;
     margin-bottom: 1vw;
 }
 
+.brief_main>.brief_box>.section>.list>.son>a>.right>.content:after {
+    content: "...";
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 0.05rem;
+    background: -webkit-linear-gradient(left, transparent, #fff 62%);
+    background: -o-linear-gradient(right, transparent, #fff 62%);
+    background: -moz-linear-gradient(right, transparent, #fff 62%);
+    background: linear-gradient(to right, transparent, #fff 62%);
+}
 
-.brief_main>.brief_box>.section>.list>.son>a>.right>.record{
+
+.brief_main>.brief_box>.section>.list>.son>a>.right>.record {
     color: #d0d0d0;
     font-size: 0.06rem;
 }
@@ -285,7 +301,7 @@ input {
 
 .brief_bottom>.brief_box>.brief_bottom_top {
     height: 2.25vw;
-    
+
 }
 
 .brief_bottom>.brief_box>.brief_bottom_top>.son {
@@ -297,7 +313,7 @@ input {
     text-align: right;
 }
 
-.brief_bottom>.brief_box>.brief_bottom_top>.son>img{
+.brief_bottom>.brief_box>.brief_bottom_top>.son>img {
     height: 1vw;
     margin-right: 0.5vw;
 }

@@ -223,7 +223,36 @@ input {
     padding-top: 1.3vw;
     padding-left: 2.6vw;
     padding-right: 1.68vw;
-    height: 54vw;
+    /* height: 54vw; */
+}
+
+.details_main>.details_box>.section img{
+    width: 50%;
+    display: block;
+    margin:  0 auto;
+}
+
+.details_main>.details_box>.section .title{
+    text-align: center;
+    font-size: 0.1rem;
+    font-weight: 600;
+    height: 3vw;
+    line-height: 3vw;
+}
+
+.details_main>.details_box>.section .day{
+    float: right;
+    font-size: 0.06rem;
+    color: #737373;
+    height: 2.5vw;
+    line-height: 2.5vw;
+}
+
+
+.details_main>.details_box>.section .box{
+    border-top: 1px solid #f2edeb;
+    padding-top: 2vw;
+    font-size: 0.08rem;
 }
 
 /* .details_main>.details_box>.section>img{

@@ -15,6 +15,11 @@ function getApi() {
             "list": {
                 "nameUrl": "/news/list",
                 "type": "get"
+            },
+            // 详情
+            "getInfo": {
+                "nameUrl": "/news/getInfo",
+                "type": "get"
             }
         }
     }

@@ -4,7 +4,7 @@ var list =
     getApi().baseUrl + getApi().url.list.nameUrl;
 
 // 总页面
-var IstotalPage = 0;
+var IstotalPage = 1;
 // 2
 function EmploysZone(pageNo) {
     var data = {
@@ -23,7 +23,7 @@ function EmploysZone(pageNo) {
                 var element = response.result.data[index];
                 if (!!element) {
                     $(".section .list a:eq(" + index + ")").attr("title", element.title);
-                    $(".section .list a:eq(" + index + ")").attr("href", "./src/pages/details.html?type=1&categoryId=" + element.id + "");
+                    $(".section .list a:eq(" + index + ")").attr("href", "details.html?type=1&categoryId=" + element.id + "");
                     $(".section .list a img:eq(" + index + ")").attr("src", element.pic);
                     $(".section .list .title:eq(" + index + ")").text(element.title);
                     $(".section .list .content:eq(" + index + ")").text(element.subtitle);
@@ -35,7 +35,6 @@ function EmploysZone(pageNo) {
             }
             // 获取总页面
             IstotalPage = response.result.totalPage
-
         },
         error: function (err) {
             console.log("请求错误");
@@ -44,33 +43,94 @@ function EmploysZone(pageNo) {
     });
 }
 
-function zPager() {
-    $("#pager").zPager({
-        current: 1, //当前页码数
-        totalData: 16,
-        pageData: 4, //每页数据条数
-        btnShow: true,
-        ajaxSetData: false
+// 分页
+function pages(num, total) {
+    // num  当前页数
+    // total  页数
+    var pages = $("#pages");
+    if (total == 1) {
+        // 页数为1时,不展现分页效果
+        pages.remove()
+    } else {
+        // 当前页数是1时,"上一页"按钮失效
+        if (num == 1) {
+            $("#pages .previous").attr("class", "previous disabled")
+        }
+        // 当前页数与页数相等时,"下一页"和"最后一页"按钮失效
+        if (num == total) {
+            $("#pages .Next").attr("class", "Next disabled");
+            $("#pages .last").attr("class", "last disabled")
+        }
+        if (num > 5) {
+            // 只同时显示5个页面按钮
+            for (var index = num - 5; index < Number(num); index++) {
+                var ele = index + 1;
+                if (num == ele) {
+                    $("#pages .Next").before("<li class='active'><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                } else {
+                    $("#pages .Next").before("<li><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                }
+            }
+        } else {
+            if (total < 6) {
+                // 只同时显示5个页面按钮
+                for (var index = 0; index < total; index++) {
+                    var ele = index + 1;
+                    if (num == ele) {
+                        $("#pages .Next").before("<li class='active'><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                    } else {
+                        $("#pages .Next").before("<li><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                    }
+                }
+            } else {
+                // 只同时显示5个页面按钮
+                for (var index = 0; index < 5; index++) {
+                    var ele = index + 1;
+                    if (num == ele) {
+                        $("#pages .Next").before("<li class='active'><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                    } else {
+                        $("#pages .Next").before("<li><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                    }
+                }
+            }
+        }
+    }
+}
+// 上一页
+function previous() {
+    $(".previous").click(function (e) {
+        e.preventDefault();
+        var locationsearch = Number(LinkParameterExtraction(window.location.search).pageNo) - 1
+        if (locationsearch != 0) {
+            window.location = "EmploysZone.html?pageNo=" + locationsearch + ""
+        }
+    });
+}
+// 下一页
+function Next() {
+    $(".Next").click(function (e) {
+        e.preventDefault();
+        var locationsearch = Number(LinkParameterExtraction(window.location.search).pageNo) + 1
+        if (!locationsearch > IstotalPage) {
+            window.location = "EmploysZone.html?pageNo=" + locationsearch + ""
+        }
+    });
+}
+// 最后一页
+function last() {
+    $(".last").click(function (e) {
+        e.preventDefault();
+        var locationsearch = Number(LinkParameterExtraction(window.location.search).pageNo)
+        if (locationsearch != IstotalPage) {
+            window.location = "EmploysZone.html?pageNo=" + IstotalPage + ""
+        }
     });
 }
 
-function currentPage(currentPage) {
-    var pageNo = LinkParameterExtraction(window.location.search).pageNo
-    console.log(pageNo)
-    /*
-        触发页码数位置： Page/js/jquery.z-pager.js 64行
-    */
-    // console.log("当前页码数：" + currentPage);
-    // EmploysZone(currentPage)
-    // if(currentPage!=pageNo){
-    //     console.log(currentPage,pageNo)
-    //     window.location.href = "EmploysZone.html?pageNo=" + currentPage;
-    // }
-    
-
-}
-
 $(
-    // EmploysZone(pageNo),
-    zPager()
+    pages(LinkParameterExtraction(window.location.search).pageNo, IstotalPage),
+    previous(),
+    Next(),
+    last(),
+    EmploysZone(Number(LinkParameterExtraction(window.location.search).pageNo)),
 )
