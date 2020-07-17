@@ -635,16 +635,17 @@ input {
 
 .secondary_institute ul li {
   float: left;
-  width: 4.375vw;
+  width: 20%;
   height: 9vw;
-  margin-left: 1.875vw;
-  margin-right: 1.875vw;
+  /* margin-left: 1.875vw; */
+  /* margin-right: 1.875vw; */
   font-size: 0.06rem;
   text-align: center;
 }
 
 .secondary_institute ul li img {
-  width: 100%;
+  width: 6vw;
+  height: 3.875vw;
   margin-top: 0.5vw;
   margin-bottom: 0.5vw;
 }

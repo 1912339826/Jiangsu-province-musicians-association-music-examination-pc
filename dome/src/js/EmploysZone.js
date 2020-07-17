@@ -23,7 +23,7 @@ function EmploysZone(pageNo) {
                 var element = response.result.data[index];
                 if (!!element) {
                     $(".section .list a:eq(" + index + ")").attr("title", element.title);
-                    $(".section .list a:eq(" + index + ")").attr("href", "details.html?type=1&categoryId=" + element.id + "");
+                    $(".section .list a:eq(" + index + ")").attr("href", "details.html?type=2&categoryId=" + element.id + "");
                     $(".section .list a img:eq(" + index + ")").attr("src", element.pic);
                     $(".section .list .title:eq(" + index + ")").text(element.title);
                     $(".section .list .content:eq(" + index + ")").text(element.subtitle);
@@ -35,6 +35,28 @@ function EmploysZone(pageNo) {
             }
             // 获取总页面
             IstotalPage = response.result.totalPage
+        },
+        error: function (err) {
+            console.log("请求错误");
+            res = err;
+        },
+    });
+}
+
+// 活动图片
+var getCarousel =
+    getApi().baseUrl + getApi().url.getCarousel.nameUrl;
+
+
+function getCarouselfun(params) {
+    $.ajax({
+        type: "get",
+        dataType: "json",
+        url: getCarousel,
+        timeout: 5000,
+        success: function (response) {
+            $("#festival").attr("href",response.result[0].link);
+            $("#festival img").attr("src",response.result[0].pic);
         },
         error: function (err) {
             console.log("请求错误");
@@ -128,6 +150,7 @@ function last() {
 }
 
 $(
+    getCarouselfun(),
     pages(LinkParameterExtraction(window.location.search).pageNo, IstotalPage),
     previous(),
     Next(),

@@ -5,8 +5,9 @@ var list =
 
 // 总页面
 var IstotalPage = 1;
-//  1 3
-function EmploysZone(pageNo,type) {
+
+//  1新闻中心 3通知公告 5协会简介  6会员中心
+function brief(pageNo,type) {
     var data = {
         categoryId: type,
         pageNo: pageNo,
@@ -23,7 +24,7 @@ function EmploysZone(pageNo,type) {
                 var element = response.result.data[index];
                 if (!!element) {
                     $(".section .list a:eq(" + index + ")").attr("title", element.title);
-                    $(".section .list a:eq(" + index + ")").attr("href", "details.html?type=1&categoryId=" + element.id + "");
+                    $(".section .list a:eq(" + index + ")").attr("href", "details.html?type="+type+"&categoryId=" + element.id + "");
                     $(".section .list a img:eq(" + index + ")").attr("src", element.pic);
                     $(".section .list .title:eq(" + index + ")").text(element.title);
                     $(".section .list .content:eq(" + index + ")").text(element.subtitle);
@@ -43,16 +44,49 @@ function EmploysZone(pageNo,type) {
     });
 }
 
+
+// 活动图片
+var getCarousel =
+    getApi().baseUrl + getApi().url.getCarousel.nameUrl;
+
+
+function getCarouselfun(params) {
+    $.ajax({
+        type: "get",
+        dataType: "json",
+        url: getCarousel,
+        timeout: 5000,
+        success: function (response) {
+            $("#festival").attr("href",response.result[0].link);
+            $("#festival img").attr("src",response.result[0].pic);
+        },
+        error: function (err) {
+            console.log("请求错误");
+            res = err;
+        },
+    });
+}
+
+
 // 分页
-function pages(num, total) {
+function pages(num, total,type) {
     
     if(LinkParameterExtraction(window.location.search).type==1){
         // 新闻中心
-        // $("#logo").attr("src","../images/brief_logo.png")
-        $("#logo").attr("src","../images/home_news_logo_03.png")
+        $("#logo").attr("src","../images/home_news_logo_03.png");
+        $("#current_page").text("新闻中心")
     }else if(LinkParameterExtraction(window.location.search).type==3){
         // 通知公告
         $("#logo").attr("src","../images/home_notification_03.png")
+        $("#current_page").text("通知公告")
+    }else if(LinkParameterExtraction(window.location.search).type==5){
+        // 协会简介
+        $("#logo").attr("src","../images/brief_logo.png")
+        $("#current_page").text("协会简介")
+    }else if(LinkParameterExtraction(window.location.search).type==6){
+        // 会员中心
+        $("#logo").attr("src","../images/memberCenter_logo.png")
+        $("#current_page").text("会员中心")
     }
     // num  当前页数
     // total  页数
@@ -75,9 +109,9 @@ function pages(num, total) {
             for (var index = num - 5; index < Number(num); index++) {
                 var ele = index + 1;
                 if (num == ele) {
-                    $("#pages .Next").before("<li class='active'><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                    $("#pages .Next").before("<li class='active'><a href='brief.html?type="+type+"&pageNo=" + ele + "'>" + ele + "</a></li>")
                 } else {
-                    $("#pages .Next").before("<li><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                    $("#pages .Next").before("<li><a href='brief.html?type="+type+"&pageNo=" + ele + "'>" + ele + "</a></li>")
                 }
             }
         } else {
@@ -86,9 +120,9 @@ function pages(num, total) {
                 for (var index = 0; index < total; index++) {
                     var ele = index + 1;
                     if (num == ele) {
-                        $("#pages .Next").before("<li class='active'><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                        $("#pages .Next").before("<li class='active'><a href='brief.html?type="+type+"&pageNo=" + ele + "'>" + ele + "</a></li>")
                     } else {
-                        $("#pages .Next").before("<li><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                        $("#pages .Next").before("<li><a href='brief.html?type="+type+"&pageNo=" + ele + "'>" + ele + "</a></li>")
                     }
                 }
             } else {
@@ -96,9 +130,9 @@ function pages(num, total) {
                 for (var index = 0; index < 5; index++) {
                     var ele = index + 1;
                     if (num == ele) {
-                        $("#pages .Next").before("<li class='active'><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                        $("#pages .Next").before("<li class='active'><a href='brief.html?type="+type+"&pageNo=" + ele + "'>" + ele + "</a></li>")
                     } else {
-                        $("#pages .Next").before("<li><a href='EmploysZone.html?pageNo=" + ele + "'>" + ele + "</a></li>")
+                        $("#pages .Next").before("<li><a href='brief.html?type="+type+"&pageNo=" + ele + "'>" + ele + "</a></li>")
                     }
                 }
             }
@@ -106,40 +140,41 @@ function pages(num, total) {
     }
 }
 // 上一页
-function previous() {
+function previous(type) {
     $(".previous").click(function (e) {
         e.preventDefault();
         var locationsearch = Number(LinkParameterExtraction(window.location.search).pageNo) - 1
         if (locationsearch != 0) {
-            window.location = "EmploysZone.html?pageNo=" + locationsearch + ""
+            window.location = "brief.html?type="+type+"&pageNo=" + locationsearch + ""
         }
     });
 }
 // 下一页
-function Next() {
+function Next(type) {
     $(".Next").click(function (e) {
         e.preventDefault();
         var locationsearch = Number(LinkParameterExtraction(window.location.search).pageNo) + 1
         if (!locationsearch > IstotalPage) {
-            window.location = "EmploysZone.html?pageNo=" + locationsearch + ""
+            window.location = "brief.html?type="+type+"&pageNo=" + locationsearch + ""
         }
     });
 }
 // 最后一页
-function last() {
+function last(type) {
     $(".last").click(function (e) {
         e.preventDefault();
         var locationsearch = Number(LinkParameterExtraction(window.location.search).pageNo)
         if (locationsearch != IstotalPage) {
-            window.location = "EmploysZone.html?pageNo=" + IstotalPage + ""
+            window.location = "brief.html?type="+type+"&pageNo=" + IstotalPage + ""
         }
     });
 }
 
 $(
-    pages(LinkParameterExtraction(window.location.search).pageNo, IstotalPage),
-    previous(),
-    Next(),
-    last(),
-    EmploysZone(Number(LinkParameterExtraction(window.location.search).pageNo),LinkParameterExtraction(window.location.search).type),
+    getCarouselfun(),
+    pages(LinkParameterExtraction(window.location.search).pageNo, IstotalPage,LinkParameterExtraction(window.location.search).type),
+    previous(LinkParameterExtraction(window.location.search).type),
+    Next(LinkParameterExtraction(window.location.search).type),
+    last(LinkParameterExtraction(window.location.search).type),
+    brief(Number(LinkParameterExtraction(window.location.search).pageNo),LinkParameterExtraction(window.location.search).type),
 )

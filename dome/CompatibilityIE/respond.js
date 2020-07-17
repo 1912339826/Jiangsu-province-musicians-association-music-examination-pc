@@ -42,7 +42,7 @@
     if (!req) {
       return;
     }
-    console.log(url)
+    // console.log(url)
     req.open("GET", url, true);
     req.onreadystatechange = function() {
       if (req.readyState !== 4 || req.status !== 200 && req.status !== 304) {

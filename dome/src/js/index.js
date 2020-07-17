@@ -5,7 +5,7 @@ jQuery.support.cors = true;
 var getIndexList =
     getApi().baseUrl + getApi().url.getIndexList.nameUrl;
 // 首页资讯
-// 类别id-->1为新闻中心2为考试信息3通知公告4二级学会
+// 类别id-->1为新闻中心2为考试信息3通知公告4二级学会5协会简介
 // 1新闻中心
 function home_news() {
     var data = {
@@ -29,7 +29,6 @@ function home_news() {
                 } else {
                     $(".home_news_list a:eq(" + index + ")").css("display", "none")
                 }
-                // subtitle
             }
         },
         error: function (err) {
@@ -67,7 +66,6 @@ function home_notification() {
                 } else {
                     $(".home_notification_list .list:eq(" + index + ")").css("display", "none")
                 }
-
             }
         },
         error: function (err) {
@@ -139,6 +137,5 @@ function slideshow(arr) {
 $(
     home_notification(),
     home_news(),
-    secondary_institute()
     // console.clear()//清空上面的console显示
 );

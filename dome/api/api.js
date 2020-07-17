@@ -20,6 +20,11 @@ function getApi() {
             "getInfo": {
                 "nameUrl": "/news/getInfo",
                 "type": "get"
+            },
+            //协会简介等页面的活动图
+            "getCarousel": {
+                "nameUrl": "/news/getCarousel",
+                "type": "get"
             }
         }
     }

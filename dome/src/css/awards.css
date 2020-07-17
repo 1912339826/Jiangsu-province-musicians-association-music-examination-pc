@@ -206,9 +206,16 @@ input {
     height: 30vw;
 }
 
-.awards_main>.awards_box>img {
-    margin-top: 1vw;
+.awards_main>.awards_box>#festival {
     width: 100%;
+    height: 7.56vw;
+    display: block;
+}
+
+.awards_main>.awards_box>#festival>img{
+    width: 100%;
+    height: 7.56vw;
+    padding-top: 1vw;
 }
 
 .awards_main>.awards_box>.crumbs {
