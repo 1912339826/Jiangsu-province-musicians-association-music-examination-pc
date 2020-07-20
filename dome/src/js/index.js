@@ -5,7 +5,7 @@ jQuery.support.cors = true;
 var getIndexList =
     getApi().baseUrl + getApi().url.getIndexList.nameUrl;
 // 首页资讯
-// 类别id-->1为新闻中心2为考试信息3通知公告4二级学会5协会简介
+// 类别id-->1为新闻中心2为考试信息3通知公告4二级学会5协会简介6会员中心7下载专区
 // 1新闻中心
 function home_news() {
     var data = {
@@ -75,10 +75,43 @@ function home_notification() {
     });
 }
 
-// 4二级学会
-function secondary_institute() {
+// // 4二级学会
+// function secondary_institute() {
+//     var data = {
+//         categoryId: 4
+//     }
+//     $.ajax({
+//         type: "get",
+//         dataType: "json",
+//         url: getIndexList,
+//         data: data,
+//         timeout: 5000,
+//         success: function (response) {
+//             for (var index = 0; index < 10; index++) {
+//                 var element = response.result[index];
+//                 if (!!element) {
+//                     // 通知公告的列表
+//                     $(".secondary_institute li:eq("+index+")").attr("title",element.title);
+//                     $(".secondary_institute li:eq("+index+") img").attr("src",element.pic);
+//                     $(".secondary_institute li:eq("+index+") div").text(element.title);
+//                     $(".secondary_institute li:eq("+index+") a").attr("href","./src/pages/details.html?type=4&categoryId=" + element.id + "");
+//                 } else {
+//                     $(".secondary_institute li:eq(" + index + ")").css("display", "none")
+//                 }
+//             }
+//         },
+//         error: function (err) {
+//             console.log("请求错误");
+//             res = err;
+//         },
+//     });
+// }
+
+// 7 下载专区
+
+function download_area(params) {
     var data = {
-        categoryId: 4
+        categoryId: 7
     }
     $.ajax({
         type: "get",
@@ -90,13 +123,12 @@ function secondary_institute() {
             for (var index = 0; index < 10; index++) {
                 var element = response.result[index];
                 if (!!element) {
-                    // 通知公告的列表
-                    $(".secondary_institute li:eq("+index+")").attr("title",element.title);
-                    $(".secondary_institute li:eq("+index+") img").attr("src",element.pic);
-                    $(".secondary_institute li:eq("+index+") div").text(element.title);
-                    $(".secondary_institute li:eq("+index+") a").attr("href","./src/pages/details.html?type=4&categoryId=" + element.id + "");
+                    // 下载专区列表
+                    $(".download_area li:eq("+index+")").attr("title",element.title);
+                    $(".download_area li:eq("+index+") a").text(element.title);
+                    $(".download_area li:eq("+index+") a").attr("href","./src/pages/details.html?type=7&categoryId=" + element.id + "");
                 } else {
-                    $(".secondary_institute li:eq(" + index + ")").css("display", "none")
+                    $(".download_area li:eq(" + index + ")").css("display", "none")
                 }
             }
         },
@@ -137,5 +169,6 @@ function slideshow(arr) {
 $(
     home_notification(),
     home_news(),
+    download_area()
     // console.clear()//清空上面的console显示
 );

@@ -34,6 +34,12 @@ function getInfo(id) {
         $("#two").attr("href", "EmploysZone.html?pageNo=1&type=2")
         $("#three").text("考级专区")
         $(".EmploysZone a").css("color", "#b2806c")
+    }else if (LinkParameterExtraction(window.location.search).type == 7) {
+        // 下载专区
+        $("#two").text("下载专区列表》")
+        $("#two").attr("href", "../../index.html")
+        $("#three").text("下载专区")
+        $(".EmploysZone a").css("color", "#b2806c")
     }
     data = {
         newsId: id

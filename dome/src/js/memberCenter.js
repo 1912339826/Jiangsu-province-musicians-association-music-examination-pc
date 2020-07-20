@@ -2,6 +2,8 @@ jQuery.support.cors = true;
 // 活动图片
 var getCarousel =
     getApi().baseUrl + getApi().url.getCarousel.nameUrl;
+var list =
+    getApi().baseUrl + getApi().url.list.nameUrl;
 // 总页面
 var IstotalPage = 1;
 
@@ -15,6 +17,43 @@ function getCarouselfun(params) {
             console.log(response.result[0])
             $("#festival").attr("href", response.result[0].link);
             $("#festival img").attr("src", response.result[0].pic);
+        },
+        error: function (err) {
+            console.log("请求错误");
+            res = err;
+        },
+    });
+}
+
+function memberCenter(pageNo) {
+    var data = {
+        categoryId: 6,
+        pageNo: pageNo,
+        pageSize: 4
+    }
+    $.ajax({
+        type: "get",
+        dataType: "json",
+        url: list,
+        data: data,
+        timeout: 5000,
+        success: function (response) {
+            for (var index = 0; index < 6; index++) {
+                var element = response.result.data[index];
+                if (!!element) {
+                    $(".section .list a:eq(" + index + ")").attr("title", element.title);
+                    $(".section .list a:eq(" + index + ")").attr("href", "details.html?type=6&categoryId=" + element.id + "");
+                    $(".section .list a img:eq(" + index + ")").attr("src", element.pic);
+                    $(".section .list .title:eq(" + index + ")").text(element.title);
+                    $(".section .list .content:eq(" + index + ")").text(element.subtitle);
+                    $(".section .list .record:eq(" + index + ") span:eq(0)").text(Today(element.createTime).getDate + "-" + Today(element.createTime).year + "-" + Today(element.createTime).month);
+                    $(".section .list .record:eq(" + index + ") span:eq(1)").text("浏览：" + element.pageViews + "次");
+                } else {
+                    $(".section .son:eq(" + index + ")").css("display", "none")
+                }
+            }
+            // 获取总页面
+            IstotalPage = response.result.totalPage
         },
         error: function (err) {
             console.log("请求错误");
@@ -113,4 +152,5 @@ $(
     previous(),
     Next(),
     last(),
+    memberCenter(Number(LinkParameterExtraction(window.location.search).pageNo)),
 )

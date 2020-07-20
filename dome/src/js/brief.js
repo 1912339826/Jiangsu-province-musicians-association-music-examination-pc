@@ -6,7 +6,7 @@ var list =
 // 总页面
 var IstotalPage = 1;
 
-//  1新闻中心 3通知公告 5协会简介  6会员中心
+//  1新闻中心 3通知公告 5协会简介  6会员中心  7下载专区
 function brief(pageNo,type) {
     var data = {
         categoryId: type,
@@ -75,18 +75,27 @@ function pages(num, total,type) {
         // 新闻中心
         $("#logo").attr("src","../images/home_news_logo_03.png");
         $("#current_page").text("新闻中心")
+        $(".index a").css("color", "#b2806c")
     }else if(LinkParameterExtraction(window.location.search).type==3){
         // 通知公告
         $("#logo").attr("src","../images/home_notification_03.png")
         $("#current_page").text("通知公告")
+        $(".index a").css("color", "#b2806c")
     }else if(LinkParameterExtraction(window.location.search).type==5){
         // 协会简介
         $("#logo").attr("src","../images/brief_logo.png")
         $("#current_page").text("协会简介")
+        $(".brief a").css("color", "#b2806c")
     }else if(LinkParameterExtraction(window.location.search).type==6){
         // 会员中心
         $("#logo").attr("src","../images/memberCenter_logo.png")
         $("#current_page").text("会员中心")
+        $(".memberCenter a").css("color", "#b2806c")
+    }else if(LinkParameterExtraction(window.location.search).type==7){
+        // 下载专区
+        $("#logo").attr("src","../images/download_logo.png")
+        $("#current_page").text("下载专区")
+        $(".EmploysZone a").css("color", "#b2806c")
     }
     // num  当前页数
     // total  页数
